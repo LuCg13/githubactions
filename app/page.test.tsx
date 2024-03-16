@@ -6,5 +6,5 @@ import Page from "./page";
 
 it("App Router: Works with Server Components", () => {
   render(<Page />);
-  expect(screen.getByRole("heading")).toHaveTextContent("Esto es una prueba para primer parcial");
+  expect(screen.getByRole("heading")).toHaveTextContent("Esto es una prueba de primer parcial");
 });
