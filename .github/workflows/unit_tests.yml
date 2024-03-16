@@ -1,0 +1,28 @@
+name: Pruebas Unitarias
+
+on:
+  push:
+    branches:
+      - examen-parcial-1
+
+jobs:
+  build:
+    name: Ejecutar pruebas unitarias
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del repositorio
+      uses: actions/checkout@v2
+
+    - name: Configurar Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Instalar dependencias
+      run: |
+        pip install -r requirements.txt
+
+    - name: Ejecutar pruebas unitarias
+      run: |
+        python -m unittest discover -s tests -p '*_test.py'
