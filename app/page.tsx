@@ -3,5 +3,5 @@ export const metadata = {
 };
 
 export default function Page() {
-  return <h1>Esto es una prueba de primer parcial</h1>;
+  return <h1>Esto es una prueba para el primer parcial</h1>;
 }
